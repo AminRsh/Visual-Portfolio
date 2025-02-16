@@ -3,11 +3,9 @@ import gsap from "gsap";
 import { useWindowScroll } from "react-use";
 import { useEffect, useRef, useState } from "react";
 import { TiLocationArrow } from "react-icons/ti";
-
-
 import Button from "./Button";
 
-const navItems = ["Home", "Projects", "About", "Contact"];
+const navItems = ["home", "projects", "about", "contact"];
 
 const NavBar = () => {
   
@@ -99,11 +97,6 @@ const NavBar = () => {
             <button
               onClick={toggleAudioIndicator}
               className="ml-10 flex items-center space-x-0.5">
-              {/* <audio
-                ref={audioElementRef}
-                className="hidden"
-                src="/audio/ambient.mp3"
-                loop /> */}
               {[1, 2, 3, 4].map((bar) => (
                 <div
                   key={bar}
