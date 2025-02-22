@@ -27,7 +27,7 @@ const About = () => {
   });
 
   return (
-    <div id="about" className="min-h-screen w-screen">
+    <div id="about" className="mb-[100px] min-h-screen w-screen">
       <div className="relative mb-8 mt-36 flex flex-col items-center gap-5">
         <p className="font-general text-sm uppercase md:text-[10px]">
           Welcome to My Creative World
@@ -39,9 +39,9 @@ const About = () => {
         />
 
         <div className="about-subtext">
-          <p>Creating impactful visuals that bring ideas to life with creativity</p>
+          <p>Here’s a little about me</p>
           <p className="text-gray-500">
-          Discover a world of creativity through bold designs that inspire, engage, and bring ideas to life. 
+          I’m Nc, a graphic designer with experience working with diverse companies. I earned my B.S. in Iran and am pursuing my M.S. in San Francisco.Discover a world of creativity through bold designs that inspire, engage, and bring ideas to life. 
           </p>
         </div>
       </div>
