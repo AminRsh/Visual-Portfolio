@@ -5,10 +5,10 @@ import { useEffect, useRef, useState } from "react";
 import { TiLocationArrow } from "react-icons/ti";
 import Button from "./Button";
 
-const navItems = ["home", "projects", "about", "contact"];
+const navItems = ["home", "showcase", "about", "contact", "portfolio"];
 
 const NavBar = () => {
-  
+
   const [isAudioPlaying, setIsAudioPlaying] = useState(false);
   const [isIndicatorActive, setIsIndicatorActive] = useState(false);
 
@@ -18,7 +18,7 @@ const NavBar = () => {
   const [isNavVisible, setIsNavVisible] = useState(true);
   const [lastScrollY, setLastScrollY] = useState(0);
 
-  
+
   const audioRef = useRef(new Audio('/audio/loop.wav'));
 
   const toggleAudioIndicator = () => {
@@ -32,22 +32,22 @@ const NavBar = () => {
     setIsAudioPlaying(prev => !prev);
     setIsIndicatorActive(prev => !prev);
   };
-  
+
   useEffect(() => {
     audioRef.current.loop = true;
   }, []);
 
   useEffect(() => {
     if (currentScrollY === 0) {
-      
+
       setIsNavVisible(true);
       navContainerRef.current.classList.remove("floating-nav");
     } else if (currentScrollY > lastScrollY) {
-      
+
       setIsNavVisible(false);
       navContainerRef.current.classList.add("floating-nav");
     } else if (currentScrollY < lastScrollY) {
-      
+
       setIsNavVisible(true);
       navContainerRef.current.classList.add("floating-nav");
     }
@@ -69,16 +69,18 @@ const NavBar = () => {
       className="fixed inset-x-0 top-4 z-50 h-16 border-none transition-all duration-700 sm:inset-x-6">
       <header className="absolute top-1/2 w-full -translate-y-1/2">
         <nav className="flex size-full items-center justify-between p-4">
-          
+
           <div className="flex items-center gap-7">
             <img src="/img/logo.png" alt="logo" className="w-10 rounded-full object-cover" />
 
-            <Button
-              id="product-button"
-              title="Projects"
-              rightIcon={<TiLocationArrow />}
-              containerClass="bg-blue-50 md:flex hidden items-center justify-center gap-1"
-            />
+            <a href="/portfolio" target="_blank">
+              <Button
+                id="product-button"
+                title="Projects"
+                rightIcon={<TiLocationArrow />}
+                containerClass="bg-blue-50 md:flex hidden items-center justify-center gap-1"
+              />
+            </a>
           </div>
 
           <div className="flex h-full items-center">
@@ -86,8 +88,9 @@ const NavBar = () => {
               {navItems.map((item, index) => (
                 <a
                   key={index}
-                  href={`#${item.toLowerCase()}`}
+                  href={item.toLowerCase() === "portfolio" ? "/portfolio" : `#${item.toLowerCase()}`}
                   className="nav-hover-btn"
+                  target={`${item.toLowerCase() === "portfolio" ? "_blank" : "_self"}`}
                 >
                   {item}
                 </a>

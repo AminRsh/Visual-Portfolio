@@ -85,7 +85,7 @@ const Hero = () => {
     <div id="home" className="relative h-dvh w-screen overflow-x-hidden" >
       {loading && (
         <div className="flex-center absolute z-[100] h-dvh w-screen overflow-hidden bg-violet-50">
-          
+
           <div className="three-body">
             <div className="three-body__dot"></div>
             <div className="three-body__dot"></div>
@@ -154,12 +154,14 @@ const Hero = () => {
               Transforming ideas into stunning <br /> visuals that inspire action
             </p>
 
-            <Button
-              id="findout-more"
-              title="find out more"
-              leftIcon={<TiLocationArrow />}
-              containerClass="bg-yellow-300 flex-center gap-1"
-            />
+            <a href="/portfolio" target="_blank">
+              <Button
+                id="findout-more"
+                title="find out more"
+                leftIcon={<TiLocationArrow />}
+                containerClass="bg-yellow-300 flex-center gap-1"
+              />
+            </a>
           </div>
         </div>
       </div>

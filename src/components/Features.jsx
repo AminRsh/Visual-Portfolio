@@ -39,7 +39,7 @@ const Features = () => {
   }, []);
 
   return (
-    <section className="w-full h-screen border-solid mb-[256px]" id="projects">
+    <section className="w-full h-screen border-solid mb-[256px]" id="showcase">
       <p className="font-general text-center text-sm uppercase md:text-[10px]">
       My design work
       </p>
