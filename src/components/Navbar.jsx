@@ -5,6 +5,8 @@ import { useEffect, useRef, useState } from "react";
 import { TiLocationArrow } from "react-icons/ti";
 import Button from "./Button";
 
+//I changed Navbar to NavBar
+
 const navItems = ["home", "showcase", "about", "contact", "portfolio"];
 
 const NavBar = () => {
