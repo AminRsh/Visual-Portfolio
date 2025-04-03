@@ -75,6 +75,7 @@ const Portfolio = () => {
       {/* Video Background Section */}
       <section className="relative h-screen overflow-hidden">
         <video src="/videos/feature-1.mp4" className="absolute inset-0 size-full object-cover" autoPlay loop muted={isMuted} playsInline />
+        <video src="/videos/feature-1.webm" className="absolute inset-0 size-full object-cover" autoPlay loop muted={isMuted} playsInline />
         <div className="absolute inset-0 flex flex-col items-center justify-center text-center bg-white bg-opacity-10">
           <button onClick={() => setIsMuted(!isMuted)} className="absolute top-5 right-10">
             {isMuted ? <VolumeX size={30} /> : <Volume2 size={30} />}
