@@ -51,7 +51,7 @@ const Modal = ({ project, isOpen, onClose }) => {
         {/* Image Gallery */}
         <div className="grid grid-cols-2 md:grid-cols-3 gap-4 p-2 mt-4">
           {project.images.map((img, index) => (
-            <img key={index} src={img} alt={project.title} className="w-full h-auto rounded-md" />
+            <img key={index} src={img} alt={project.title} loading='lazy' className="w-full h-auto rounded-md" />
           ))}
         </div>
       </div>
@@ -88,7 +88,7 @@ const Portfolio = () => {
         <div className="grid grid-cols-2 md:grid-cols-3 gap-4 max-w-7xl mx-auto">
           {projects.map((project) => (
             <div key={project.id} className="relative group cursor-pointer" onClick={() => openModal(project)}>
-              <img src={project.images[0]} alt={project.title} className="w-full h-72 object-cover rounded-lg" />
+              <img src={project.images[0]} loading='lazy' alt={project.title} className="w-full h-72 object-cover rounded-lg" />
               <div className="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                 <p className="text-white">{project.title}</p>
               </div>

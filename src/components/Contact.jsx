@@ -5,7 +5,7 @@ import ContactModal from "./ContactModal ";
 
 const ImageClipBox = ({ src, clipClass }) => (
   <div className={clipClass}>
-    <img src={src} />
+    <img src={src} loading='lazy'/>
   </div>
 );
 
