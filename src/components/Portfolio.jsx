@@ -51,7 +51,7 @@ const Modal = ({ project, isOpen, onClose }) => {
         {/* Image Gallery */}
         <div className="grid grid-cols-2 md:grid-cols-3 gap-4 p-2 mt-4">
           {project.images.map((img, index) => (
-            <img key={index} src={img} alt={project.title} loading='lazy' className="w-full h-auto rounded-md" />
+            <img key={index} src={img} alt={project.title} loading='lazy' className="w-full h-[460px] rounded-md" />
           ))}
         </div>
       </div>
